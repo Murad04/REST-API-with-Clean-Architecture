@@ -10,6 +10,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("a1a7b41e-fde8-45a0-8f4d-15fc7038cc08")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("CleanArchitectureAPi.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

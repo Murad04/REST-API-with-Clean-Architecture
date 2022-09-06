@@ -10,8 +10,9 @@ namespace CleanArchitectureAPi.Infrastructure;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddInfrastructure(this IServiceCollection serviceCollection)
+    public static IServiceCollection AddInfrastructure(this IServiceCollection serviceCollection, Microsoft.Extensions.Configuration.ConfigurationManager configuration)
     {
+        serviceCollection.Configure<JwtSettings>(configuration.GetSection(JwtSettings.SectionName));
         serviceCollection.AddSingleton<IJwtTokenGenerator,JwtTokenGenerator>();
         serviceCollection.AddSingleton<IDateTimeProvider,DateTimeProvider>();
         return serviceCollection;
