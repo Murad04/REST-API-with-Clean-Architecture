@@ -1,0 +1,12 @@
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Contracts\bin\Debug\net6.0\CleanArchitectureAPi.Contracts.deps.json
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Contracts\bin\Debug\net6.0\CleanArchitectureAPi.Contracts.dll
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Contracts\bin\Debug\net6.0\CleanArchitectureAPi.Contracts.pdb
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Contracts\obj\Debug\net6.0\CleanArchitectureAPi.Contracts.csproj.AssemblyReference.cache
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Contracts\obj\Debug\net6.0\CleanArchitectureAPi.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Contracts\obj\Debug\net6.0\CleanArchitectureAPi.Contracts.AssemblyInfoInputs.cache
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Contracts\obj\Debug\net6.0\CleanArchitectureAPi.Contracts.AssemblyInfo.cs
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Contracts\obj\Debug\net6.0\CleanArchitectureAPi.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Contracts\obj\Debug\net6.0\CleanArchitectureAPi.Contracts.dll
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Contracts\obj\Debug\net6.0\refint\CleanArchitectureAPi.Contracts.dll
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Contracts\obj\Debug\net6.0\CleanArchitectureAPi.Contracts.pdb
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Contracts\obj\Debug\net6.0\ref\CleanArchitectureAPi.Contracts.dll

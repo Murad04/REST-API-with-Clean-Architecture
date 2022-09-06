@@ -1,0 +1,12 @@
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Domain\bin\Debug\net6.0\CleanArchitectureAPi.Domain.deps.json
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Domain\bin\Debug\net6.0\CleanArchitectureAPi.Domain.dll
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Domain\bin\Debug\net6.0\CleanArchitectureAPi.Domain.pdb
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Domain\obj\Debug\net6.0\CleanArchitectureAPi.Domain.csproj.AssemblyReference.cache
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Domain\obj\Debug\net6.0\CleanArchitectureAPi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Domain\obj\Debug\net6.0\CleanArchitectureAPi.Domain.AssemblyInfoInputs.cache
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Domain\obj\Debug\net6.0\CleanArchitectureAPi.Domain.AssemblyInfo.cs
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Domain\obj\Debug\net6.0\CleanArchitectureAPi.Domain.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Domain\obj\Debug\net6.0\CleanArchitectureAPi.Domain.dll
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Domain\obj\Debug\net6.0\refint\CleanArchitectureAPi.Domain.dll
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Domain\obj\Debug\net6.0\CleanArchitectureAPi.Domain.pdb
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Domain\obj\Debug\net6.0\ref\CleanArchitectureAPi.Domain.dll

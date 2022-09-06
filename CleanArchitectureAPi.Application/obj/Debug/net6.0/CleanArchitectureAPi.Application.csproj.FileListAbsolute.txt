@@ -1,0 +1,15 @@
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Application\bin\Debug\net6.0\CleanArchitectureAPi.Application.deps.json
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Application\bin\Debug\net6.0\CleanArchitectureAPi.Application.dll
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Application\bin\Debug\net6.0\CleanArchitectureAPi.Application.pdb
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Application\obj\Debug\net6.0\CleanArchitectureAPi.Application.csproj.AssemblyReference.cache
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Application\obj\Debug\net6.0\CleanArchitectureAPi.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Application\obj\Debug\net6.0\CleanArchitectureAPi.Application.AssemblyInfoInputs.cache
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Application\obj\Debug\net6.0\CleanArchitectureAPi.Application.AssemblyInfo.cs
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Application\obj\Debug\net6.0\CleanArchitectureAPi.Application.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Application\obj\Debug\net6.0\CleanArchitectureAPi.Application.dll
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Application\obj\Debug\net6.0\refint\CleanArchitectureAPi.Application.dll
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Application\obj\Debug\net6.0\CleanArchitectureAPi.Application.pdb
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Application\obj\Debug\net6.0\ref\CleanArchitectureAPi.Application.dll
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Application\bin\Debug\net6.0\CleanArchitectureAPi.Domain.dll
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Application\bin\Debug\net6.0\CleanArchitectureAPi.Domain.pdb
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Application\obj\Debug\net6.0\CleanArchitectureAPi.Application.csproj.CopyComplete
