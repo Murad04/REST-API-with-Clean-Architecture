@@ -1,3 +1,4 @@
+using CleanArchitectureAPi.Api.Middleware;
 using CleanArchitectureAPi.Application;
 using CleanArchitectureAPi.Application.Services.Authentication;
 using CleanArchitectureAPi.Application.Services.Interface;
@@ -21,6 +22,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseMiddleware<ErrorHandling_Middleware>();
 
 app.UseHttpsRedirection();
 
