@@ -1,10 +1,8 @@
 using CleanArchitectureAPi.Application.Services.Authentication;
 
-namespace CleanArchitectureAPi.Application.Services.Interface;
+namespace CleanArchitectureAPi.Application.Services.Authentication.Commands.Interface;
 
-public interface IAuthenticationServices
+public interface IAuthenticationcommandServices
 {   
     AuthenticationResult Register(string FirstName,string LastName,string Password,string Email);
-
-    AuthenticationResult Login(string Email,string Password);
 }

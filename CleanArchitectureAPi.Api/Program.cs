@@ -3,7 +3,7 @@ using CleanArchitectureAPi.Api.Filters;
 //using CleanArchitectureAPi.Api.Middleware;
 using CleanArchitectureAPi.Application;
 using CleanArchitectureAPi.Application.Services.Authentication;
-using CleanArchitectureAPi.Application.Services.Interface;
+using CleanArchitectureAPi.Application.Services.Authentication.Commands.Interface;
 using CleanArchitectureAPi.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 

@@ -1,17 +1,17 @@
 using CleanArchitectureAPi.Application.Common.Errors;
 using CleanArchitectureAPi.Application.Common.Interfaces.Authentication;
 using CleanArchitectureAPi.Application.Common.Interfaces.Persistence;
-using CleanArchitectureAPi.Application.Services.Interface;
+using CleanArchitectureAPi.Application.Services.Authentication.Commands.Interface;
 using CleanArchitectureAPi.Domain.Entities;
 
-namespace CleanArchitectureAPi.Application.Services.Authentication;
+namespace CleanArchitectureAPi.Application.Services.Authentication.Commands;
 
-public class AuthenticationServices : IAuthenticationServices
+public class AuthenticationCommandServices : IAuthenticationcommandServices
 {
     private IJwtTokenGenerator _jwtTokenGenerator;
     private IUserRepository _userRepository;
 
-    public AuthenticationServices(IJwtTokenGenerator jwtTokenGenerator, IUserRepository userRepository)
+    public AuthenticationCommandServices(IJwtTokenGenerator jwtTokenGenerator, IUserRepository userRepository)
     {
         _jwtTokenGenerator = jwtTokenGenerator;
         _userRepository = userRepository;
@@ -48,25 +48,5 @@ public class AuthenticationServices : IAuthenticationServices
                                         LastName,
                                         Email,
                                         token);
-    }
-
-    public AuthenticationResult Login(string Email, string Password)
-    {
-        if (_userRepository.GetByEmailandPassword(email: Email, password: Password) is not Users user)
-        {
-            throw new Exception("User does not exists ");
-        }
-
-        if (user.Password != Password) throw new Exception("Password in in correct");
-
-        var token = _jwtTokenGenerator.GenerateToken(user.ID, user.FirstName, user.LastName);
-
-        return new AuthenticationResult(
-            user.ID,
-            user.FirstName,
-            user.LastName,
-            user.Email,
-            token
-        );
     }
 }

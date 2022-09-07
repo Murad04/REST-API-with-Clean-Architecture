@@ -2,7 +2,7 @@ using CleanArchitectureAPi.Application.Common.Interfaces.Authentication;
 using CleanArchitectureAPi.Application.Common.Interfaces.Persistence;
 using CleanArchitectureAPi.Application.Common.Interfaces.Services;
 using CleanArchitectureAPi.Application.Services.Authentication;
-using CleanArchitectureAPi.Application.Services.Interface;
+using CleanArchitectureAPi.Application.Services.Authentication.Commands.Interface;
 using CleanArchitectureAPi.Infrastructure.Authentication;
 using CleanArchitectureAPi.Infrastructure.Persistence;
 using CleanArchitectureAPi.Infrastructure.Services;
