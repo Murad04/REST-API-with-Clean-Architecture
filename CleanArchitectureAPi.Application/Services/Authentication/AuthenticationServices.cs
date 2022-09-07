@@ -1,3 +1,4 @@
+using CleanArchitectureAPi.Application.Common.Errors;
 using CleanArchitectureAPi.Application.Common.Interfaces.Authentication;
 using CleanArchitectureAPi.Application.Common.Interfaces.Persistence;
 using CleanArchitectureAPi.Application.Services.Interface;
@@ -22,7 +23,11 @@ public class AuthenticationServices : IAuthenticationServices
         {
             if (_userRepository.GetUserByEmail(email: Email) is not null)
             {
-                throw new Exception("User with given Name , Surname and Email already exists ");
+                throw new DuplicateEmailException();
+
+
+                //This is used for global error exception
+                //throw new Exception("User with given Name , Surname and Email already exists ");
             }
         }
 
