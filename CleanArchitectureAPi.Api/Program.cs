@@ -10,7 +10,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 // Adds the application and infrastructure.
 builder.Services.AddApplication().AddInfrastructure(builder.Configuration);
-builder.Services.AddControllers(options=>options.Filters.Add<ErrorHandling_FilterAttribute>());
+
+// This is used for adding custom error handling middleware
+//builder.Services.AddControllers(options=>options.Filters.Add<ErrorHandling_FilterAttribute>());
+builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -26,6 +29,8 @@ if (app.Environment.IsDevelopment())
 
 // This is used for adding custom error handling middleware
 //app.UseMiddleware<ErrorHandling_Middleware>();
+
+app.UseExceptionHandler("/error");
 
 app.UseHttpsRedirection();
 

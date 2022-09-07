@@ -1,3 +1,4 @@
+using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
@@ -7,12 +8,18 @@ public class ErrorHandling_FilterAttribute : ExceptionFilterAttribute
 {
     public override void OnException(ExceptionContext context)
     {
+        // Get the exception from the context. 
         var exception = context.Exception;
-        var errorResult = new { error = "An error occured while processing yout request." };
-        context.Result = new ObjectResult(errorResult)
+        // Creates a new ProblemDetails object and initializes it
+        var problemDetails=new ProblemDetails
         {
-            StatusCode = 500
+            Title="An error occured while processing yout request.",
+            Status=(int)HttpStatusCode.InternalServerError,
+            Type="https://tools.ietf.org/html/rfc7231#section-6.6.1",
         };
+        // Creates a new ObjectResult object with the problem details.
+        context.Result = new ObjectResult(problemDetails);
+        // Invoked when an exception has been handled.
         context.ExceptionHandled = true;
     }
 }
