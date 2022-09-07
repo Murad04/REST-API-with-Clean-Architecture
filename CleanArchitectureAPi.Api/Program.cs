@@ -1,9 +1,11 @@
+using CleanArchitectureAPi.Api.Errors;
 using CleanArchitectureAPi.Api.Filters;
 //using CleanArchitectureAPi.Api.Middleware;
 using CleanArchitectureAPi.Application;
 using CleanArchitectureAPi.Application.Services.Authentication;
 using CleanArchitectureAPi.Application.Services.Interface;
 using CleanArchitectureAPi.Infrastructure;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +16,8 @@ builder.Services.AddApplication().AddInfrastructure(builder.Configuration);
 // This is used for adding custom error handling middleware
 //builder.Services.AddControllers(options=>options.Filters.Add<ErrorHandling_FilterAttribute>());
 builder.Services.AddControllers();
+
+builder.Services.AddSingleton<ProblemDetailsFactory,CleanArchitectureAPiProblemDetailsFactory>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
