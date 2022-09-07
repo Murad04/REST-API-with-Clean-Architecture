@@ -21,6 +21,7 @@ public class JwtTokenGenerator : IJwtTokenGenerator
 
     public string GenerateToken(Guid userID, string firstname, string lastname)
     {
+        // Creates a signing key for the JWT secret.
         var signingCredentials=new SigningCredentials(
             new SymmetricSecurityKey(
                 Encoding.UTF8.GetBytes(_jwtSettings.Secret)
@@ -28,6 +29,7 @@ public class JwtTokenGenerator : IJwtTokenGenerator
             SecurityAlgorithms.HmacSha256
         );
 
+        // Generates a list of claims for a user.
         var claims=new []
         {
             new Claim(JwtRegisteredClaimNames.Sub,userID.ToString()),
@@ -36,6 +38,7 @@ public class JwtTokenGenerator : IJwtTokenGenerator
             new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString()),
         };
 
+        // Creates a new security token.
         var securityToken=new JwtSecurityToken(
             issuer:_jwtSettings.Issuer,
             audience:_jwtSettings.Audience,
@@ -43,6 +46,7 @@ public class JwtTokenGenerator : IJwtTokenGenerator
             claims: claims,
             signingCredentials:signingCredentials);
 
+        // Returns a JWT security token.
         return new JwtSecurityTokenHandler().WriteToken(securityToken);
     }
 }

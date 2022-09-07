@@ -38,10 +38,13 @@ public class AuthenticationController :ControllerBase
     [HttpPost("login")]
     public IActionResult Login(LoginRequest request)
     {
+        // Login to the Authentication service.
         var result=_authenticationServices.Login(request.Email,request.Password);
 
+        // Creates a AuthenticationResponse with the given ID LastName Email and Token.
         var response=new AuthenticationResponse(result.Id,result.FirstName,result.LastName,result.Email,result.Token);
 
+        // Return the response status.
         return Ok(response);
     }
 }
