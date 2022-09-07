@@ -1,10 +1,10 @@
 using CleanArchitectureAPi.Application.Common.Errors;
 using CleanArchitectureAPi.Application.Common.Interfaces.Authentication;
 using CleanArchitectureAPi.Application.Common.Interfaces.Persistence;
-using CleanArchitectureAPi.Application.Services.Authentication.Queries.Interface;
+using CleanArchitectureAPi.Application.Services.Authentication.Queries.Login.Interface;
 using CleanArchitectureAPi.Domain.Entities;
 
-namespace CleanArchitectureAPi.Application.Services.Authentication.Queries;
+namespace CleanArchitectureAPi.Application.Services.Authentication.Queries.Login;
 
 public class AuthenticationQueryServices : IAuthenticationQueryServices
 {

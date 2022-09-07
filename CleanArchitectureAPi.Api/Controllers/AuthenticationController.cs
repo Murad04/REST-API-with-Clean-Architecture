@@ -1,6 +1,6 @@
 using CleanArchitectureAPi.Api.Filters;
 using CleanArchitectureAPi.Application.Services.Authentication.Commands.Interface;
-using CleanArchitectureAPi.Application.Services.Authentication.Queries.Interface;
+using CleanArchitectureAPi.Application.Services.Authentication.Queries.Login.Interface;
 using CleanArchitectureAPi.Contracts.Authentication;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;

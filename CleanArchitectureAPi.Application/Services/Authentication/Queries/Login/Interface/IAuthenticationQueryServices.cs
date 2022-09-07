@@ -1,6 +1,6 @@
 using CleanArchitectureAPi.Application.Services.Authentication;
 
-namespace CleanArchitectureAPi.Application.Services.Authentication.Queries.Interface;
+namespace CleanArchitectureAPi.Application.Services.Authentication.Queries.Login.Interface;
 
 public interface IAuthenticationQueryServices
 {   

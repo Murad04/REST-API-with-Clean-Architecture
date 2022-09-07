@@ -1,7 +1,7 @@
 using CleanArchitectureAPi.Application.Services.Authentication.Commands;
 using CleanArchitectureAPi.Application.Services.Authentication.Commands.Interface;
-using CleanArchitectureAPi.Application.Services.Authentication.Queries;
-using CleanArchitectureAPi.Application.Services.Authentication.Queries.Interface;
+using CleanArchitectureAPi.Application.Services.Authentication.Queries.Login;
+using CleanArchitectureAPi.Application.Services.Authentication.Queries.Login.Interface;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace CleanArchitectureAPi.Application;
