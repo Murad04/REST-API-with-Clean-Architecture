@@ -1,4 +1,5 @@
-using CleanArchitectureAPi.Api.Middleware;
+using CleanArchitectureAPi.Api.Filters;
+//using CleanArchitectureAPi.Api.Middleware;
 using CleanArchitectureAPi.Application;
 using CleanArchitectureAPi.Application.Services.Authentication;
 using CleanArchitectureAPi.Application.Services.Interface;
@@ -9,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 // Adds the application and infrastructure.
 builder.Services.AddApplication().AddInfrastructure(builder.Configuration);
-builder.Services.AddControllers();
+builder.Services.AddControllers(options=>options.Filters.Add<ErrorHandling_FilterAttribute>());
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -23,7 +24,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseMiddleware<ErrorHandling_Middleware>();
+// This is used for adding custom error handling middleware
+//app.UseMiddleware<ErrorHandling_Middleware>();
 
 app.UseHttpsRedirection();
 

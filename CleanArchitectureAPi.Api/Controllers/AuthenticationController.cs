@@ -1,3 +1,4 @@
+using CleanArchitectureAPi.Api.Filters;
 using CleanArchitectureAPi.Application.Services.Interface;
 using CleanArchitectureAPi.Contracts.Authentication;
 using Microsoft.AspNetCore.Authentication;
@@ -7,6 +8,7 @@ namespace CleanArchitectureAPi.Api.Controllers;
 
 [ApiController]
 [Route("auth")]
+//[ErrorHandling_Filter]
 public class AuthenticationController :ControllerBase
 {
     private IAuthenticationServices _authenticationServices;
