@@ -1,4 +1,4 @@
-# ASP.Net 6.0 REST API with Clean Architecture
+# ASP.NET 6.0 REST API with Clean Architecture
 
 
 #### Activity & Overall 💻
