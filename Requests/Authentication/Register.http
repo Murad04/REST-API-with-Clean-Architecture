@@ -14,7 +14,7 @@ POST https://localhost:7172/auth/login
 Content-Type: application/json
 
 {
-    "email":"add@S",
+    "email":"a fdd@S",
     "password":"dds"
 }
 

@@ -2,7 +2,9 @@ using CleanArchitectureAPi.Application.Common.Errors;
 using CleanArchitectureAPi.Application.Common.Interfaces.Authentication;
 using CleanArchitectureAPi.Application.Common.Interfaces.Persistence;
 using CleanArchitectureAPi.Application.Services.Authentication.Queries.Login.Interface;
+using CleanArchitectureAPi.Domain.Common.Errors;
 using CleanArchitectureAPi.Domain.Entities;
+using ErrorOr;
 
 namespace CleanArchitectureAPi.Application.Services.Authentication.Queries.Login;
 
@@ -18,11 +20,11 @@ public class AuthenticationQueryServices : IAuthenticationQueryServices
     }
 
 
-    public AuthenticationResult Login(string Email, string Password)
+    public ErrorOr<AuthenticationResult> Login(string Email, string Password)
     {
         if (_userRepository.GetByEmailandPassword(email: Email, password: Password) is not Users user)
         {
-            throw new Exception("User does not exists ");
+            return Errors.Authentication.InvalidCredentials; 
         }
 
         if (user.Password != Password) throw new Exception("Password in in correct");

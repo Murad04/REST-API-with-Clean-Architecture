@@ -39,3 +39,6 @@ C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Api\bin\Deb
 C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Api\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Api\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Api\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Api\bin\Debug\net6.0\MediatR.dll
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Api\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Api\bin\Debug\net6.0\ErrorOr.dll

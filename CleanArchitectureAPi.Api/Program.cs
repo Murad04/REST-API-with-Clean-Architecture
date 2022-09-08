@@ -1,4 +1,4 @@
-using CleanArchitectureAPi.Api.Errors;
+using CleanArchitectureAPi.Api.Common.Errors;
 using CleanArchitectureAPi.Api.Filters;
 //using CleanArchitectureAPi.Api.Middleware;
 using CleanArchitectureAPi.Application;

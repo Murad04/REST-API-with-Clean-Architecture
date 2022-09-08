@@ -1,16 +1,17 @@
 using CleanArchitectureAPi.Api.Filters;
+using CleanArchitectureAPi.Application.Services.Authentication;
 using CleanArchitectureAPi.Application.Services.Authentication.Commands.Interface;
 using CleanArchitectureAPi.Application.Services.Authentication.Queries.Login.Interface;
 using CleanArchitectureAPi.Contracts.Authentication;
+using ErrorOr;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CleanArchitectureAPi.Api.Controllers;
 
-[ApiController]
 [Route("auth")]
 //[ErrorHandling_Filter]
-public class AuthenticationController : ControllerBase
+public class AuthenticationController : ApiController
 {
     private IAuthenticationcommandServices _authenticationCommandServices;
 
@@ -33,25 +34,38 @@ public class AuthenticationController : ControllerBase
         /**
         *? Getting the result from IAuthenticationServices in order to check registering is completed.
         */
-        var result = _authenticationCommandServices.Register(request.FirstName, request.LastName, request.Password, request.Email);
-        /** 
-        *?  Check the inputted data
-        */
-        var response = new AuthenticationResponse(result.Id, result.FirstName, result.LastName, result.Email, result.Token);
+        ErrorOr<AuthenticationResult> result = _authenticationCommandServices.Register(request.FirstName,
+                                                                                     request.LastName,
+                                                                                     request.Password,
+                                                                                     request.Email);
 
-        return Ok(response);
+
+        // Authenticates a map auth result.
+        return result.Match(
+            result => Ok(MapAuthResult(result)),
+            errors => Problem(errors)
+        );
+    }
+
+    private static AuthenticationResponse MapAuthResult(AuthenticationResult result)
+    {
+        return new AuthenticationResponse(result.Id, result.FirstName, result.LastName, result.Email, result.Token);
     }
 
     [HttpPost("login")]
     public IActionResult Login(LoginRequest request)
     {
         // Login to the Authentication service.
-        var result = _authenticationQueryServices.Login(request.Email, request.Password);
+        ErrorOr<AuthenticationResult> result = _authenticationQueryServices.Login(request.Email, request.Password);
 
-        // Creates a AuthenticationResponse with the given ID LastName Email and Token.
-        var response = new AuthenticationResponse(result.Id, result.FirstName, result.LastName, result.Email, result.Token);
+        return result.Match(
+            result => Ok(MapLoginResult(result)),
+            errors => Problem(errors)
+        );
+    }
 
-        // Return the response status.
-        return Ok(response);
+    private static AuthenticationResponse MapLoginResult(AuthenticationResult result)
+    {
+        return new AuthenticationResponse(result.Id, result.FirstName, result.LastName, result.Email, result.Token);
     }
 }

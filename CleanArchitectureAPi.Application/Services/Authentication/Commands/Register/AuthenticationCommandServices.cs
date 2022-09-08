@@ -2,8 +2,9 @@ using CleanArchitectureAPi.Application.Common.Errors;
 using CleanArchitectureAPi.Application.Common.Interfaces.Authentication;
 using CleanArchitectureAPi.Application.Common.Interfaces.Persistence;
 using CleanArchitectureAPi.Application.Services.Authentication.Commands.Interface;
+using CleanArchitectureAPi.Domain.Common.Errors;
 using CleanArchitectureAPi.Domain.Entities;
-
+using ErrorOr;
 namespace CleanArchitectureAPi.Application.Services.Authentication.Commands;
 
 public class AuthenticationCommandServices : IAuthenticationcommandServices
@@ -17,14 +18,14 @@ public class AuthenticationCommandServices : IAuthenticationcommandServices
         _userRepository = userRepository;
     }
 
-    public AuthenticationResult Register(string FirstName, string LastName, string Password, string Email)
+    public ErrorOr<AuthenticationResult> Register(string FirstName, string LastName, string Password, string Email)
     {
         if (_userRepository.GetByNameandSurname(firstName: FirstName, lastName: LastName) is not null)
         {
             if (_userRepository.GetUserByEmail(email: Email) is not null)
             {
-                throw new DuplicateEmailException();
-
+                //throw new DuplicateEmailException();
+                return Errors.User.DuplicateEmail;
 
                 //This is used for global error exception
                 //throw new Exception("User with given Name , Surname and Email already exists ");
