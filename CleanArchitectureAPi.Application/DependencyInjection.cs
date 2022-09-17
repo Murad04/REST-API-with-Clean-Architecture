@@ -1,7 +1,13 @@
+using System.Reflection;
+using CleanArchitectureAPi.Application.Authentication.Commands.Register;
+using CleanArchitectureAPi.Application.Authentication.Common;
+using CleanArchitectureAPi.Application.Common.Behaviors;
 using CleanArchitectureAPi.Application.Services.Authentication.Commands;
 using CleanArchitectureAPi.Application.Services.Authentication.Commands.Interface;
 using CleanArchitectureAPi.Application.Services.Authentication.Queries.Login;
 using CleanArchitectureAPi.Application.Services.Authentication.Queries.Login.Interface;
+using ErrorOr;
+using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -19,6 +25,12 @@ public static class DependencyInjection
         // Added MediatR to services
         serviceCollection.AddMediatR(typeof(DependencyInjection).Assembly);
 
+        serviceCollection.AddScoped(
+                            typeof(IPipelineBehavior<,>),
+                            typeof(ValidateRegisterCommandBehavior<,>));
+
+        serviceCollection.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+        
         return serviceCollection;
     }
 }

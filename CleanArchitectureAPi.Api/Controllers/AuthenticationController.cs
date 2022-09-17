@@ -46,8 +46,8 @@ public class AuthenticationController : ApiController
     {
         var command = new Registercommand(request.FirstName,
                                                                                      request.LastName,
-                                                                                     request.Password,
-                                                                                     request.Email);
+                                                                                     request.Email,
+                                                                                     request.Password);
 
         ErrorOr<AuthenticationResult> result = await _mediatr.Send(command);
 

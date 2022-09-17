@@ -43,3 +43,6 @@ C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Api\bin\Deb
 C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Api\bin\Debug\net6.0\MediatR.Contracts.dll
 C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Api\bin\Debug\net6.0\ErrorOr.dll
 C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Api\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Api\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Api\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\DELL\source\repos\CleanArchitectureAPi\CleanArchitectureAPi.Api\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll

@@ -2,8 +2,8 @@ POST  https://localhost:7172/auth/register
 Content-Type: application/json
 
 {
-    "firstname":"dds",
-    "lastname":"sdd",
+    "firstname":"",
+    "lastname":"",
     "email":"add@S",
     "password":"dds"
 }
@@ -14,7 +14,7 @@ POST https://localhost:7172/auth/login
 Content-Type: application/json
 
 {
-    "email":"a fdd@S",
+    "email":"ss",
     "password":"dds"
 }
 
